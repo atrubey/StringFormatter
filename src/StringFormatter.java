@@ -33,7 +33,11 @@ public class StringFormatter
 		String output = "";
 		
 		for (int i = 0; i < wordList.size(); i++) {
-			output = output + wordList.get(i) + gap; 
+			output = output + wordList.get(i) + gap;
+			if (leftoverCount > 0) {
+				output += " "; 
+				leftoverCount--; 
+			}
 		}
 		
 		return output; 
